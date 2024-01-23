@@ -1,16 +1,16 @@
-package com.company.exception;
+package com.cemal.exception;
 
 import lombok.Getter;
 
 @Getter
-public class UserException extends RuntimeException{
+public class SiparisandMalException extends RuntimeException{
     private final EerrorType type;
 
-    public UserException(EerrorType type){
+    public SiparisandMalException(EerrorType type){
         super(type.getMesaj());
         this.type=type;
     }
-    public UserException(EerrorType type, String mesaj){
+    public SiparisandMalException(EerrorType type, String mesaj){
         super(mesaj);
         this.type=type;
     }

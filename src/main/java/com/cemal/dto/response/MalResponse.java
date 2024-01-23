@@ -10,8 +10,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor //boş constructor oluşturur.
 @AllArgsConstructor //dolu constructor oluşturur.
 public class MalResponse {
-    Long id;
-    String name;
+    private Long id;
+    private String name;
 
-    Double birim_fiyati_tl;
+    private Double birim_fiyati_tl;
 }

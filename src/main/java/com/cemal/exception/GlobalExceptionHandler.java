@@ -1,4 +1,4 @@
-package com.company.exception;
+package com.cemal.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -36,9 +36,9 @@ public class GlobalExceptionHandler {
         return ResponseEntity.badRequest().body("Uygulamada bad request gerçekleşti..."+e.getMessage());
     }
 
-    @ExceptionHandler(UserException.class)
+    @ExceptionHandler(SiparisandMalException.class)
     @ResponseBody
-    public ResponseEntity<ErrorMesaj> handleSatisException(UserException e){
+    public ResponseEntity<ErrorMesaj> handleSatisException(SiparisandMalException e){
         EerrorType eerrorType=e.getType();
         HttpStatus httpStatus=eerrorType.getStatus();
         return new ResponseEntity<ErrorMesaj>(createErrorMesaj(eerrorType,e),httpStatus);

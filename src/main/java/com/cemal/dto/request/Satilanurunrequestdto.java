@@ -11,9 +11,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor //boş constructor oluşturur.
 @AllArgsConstructor //dolu constructor oluşturur.
 public class Satilanurunrequestdto {
-    Long urunid;
+    private Long urunid;
 
-    Integer adet;
+    private Integer adet;
 
-    Double fiyat;
+    private Double fiyat;
 }

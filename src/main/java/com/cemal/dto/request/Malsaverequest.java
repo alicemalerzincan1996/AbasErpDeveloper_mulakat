@@ -15,8 +15,8 @@ import javax.validation.constraints.Size;
 public class Malsaverequest {
     @NotBlank(message = "Mal adı boş geçilemez.")
     @Size(min=3,max=30)
-    String name;
+    private String name;
     @NotBlank(message = "fiyat bos gecilemez.")
-    Double birim_fiyati_tl;
+    private Double birim_fiyati_tl;
 
 }

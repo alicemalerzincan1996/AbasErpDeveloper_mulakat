@@ -24,8 +24,8 @@ public class SiparisService extends ServiceManager<Siparis,Long> implements Seri
     private final MalService malService;
     private final SatilanurunService satilanurunService;
     private final IMalveSiparisMapper malveSiparisMapper;
-
-    public SiparisService(ISiparisRepository iSiparisRepository, MalService malService, SatilanurunService satilanurunService, IMalveSiparisMapper malveSiparisMapper) {
+    public SiparisService(ISiparisRepository iSiparisRepository, MalService malService,
+                          SatilanurunService satilanurunService, IMalveSiparisMapper malveSiparisMapper) {
         super(iSiparisRepository);
         this.iSiparisRepository = iSiparisRepository;
         this.malService = malService;
@@ -40,17 +40,12 @@ public class SiparisService extends ServiceManager<Siparis,Long> implements Seri
                 Satilanurun satilanurun=Satilanurun.builder().mal(mal.get()).
                         satilanfiyat(sepetItems.get(i).getSatilanFiyat()).miktar(sepetItems.get(i).getAdet()).build();
                 satilanuruns.add(satilanurun);
-
             }
         }
         satilanurunService.saveAll(satilanuruns);
-
         Siparis siparis=Siparis.builder().satilanurunList(satilanuruns).build();
-
         return save(siparis);
     }
-
-
     public Siparis update(Long id,Siparisupdaterequest siparisupdaterequest){
         Optional<Siparis> optionalSiparis=findById(id);
         if (optionalSiparis.isPresent()){
@@ -70,7 +65,6 @@ public class SiparisService extends ServiceManager<Siparis,Long> implements Seri
         }
         else throw new SiparisandMalException(EerrorType.Siparis_BULUNAMADI);
     }
-
     public Double sipraistoplama( List<SepetxItem> sepet){
         Double toplam=0.0;
         List<Siparis> siparisList=new ArrayList<>();
@@ -87,34 +81,28 @@ public class SiparisService extends ServiceManager<Siparis,Long> implements Seri
                     .sum();
             toplam += siparisToplami;
         }
-
-
         return toplam;
     }
-
     public Double sipraisortalama(List<SepetxItem> sepet){
-
+        Double siparisOrtalamasi=0.0;
         Double ortalama=0.0;
+        int miktar=0;
         List<Siparis> siparisList=new ArrayList<>();
         for (int i = 0; i < sepet.size(); i++) {
             Optional<Siparis> siparis=findById(sepet.get(i).getSiparisId());
             if (siparis.isPresent()){
-                siparisList.add(siparis.get());
-            }
-        }
+                siparisList.add(siparis.get());}}
         for (Siparis siparis : siparisList) {
-            double siparisOrtalamasi = siparis.getSatilanurunList()
+             siparisOrtalamasi =siparisOrtalamasi+ siparis.getSatilanurunList()
                     .stream()
-                    .mapToDouble(a -> a.getSatilanfiyat() * a.getMiktar())
-                    .average()
-                    .orElse(0.0);
-            ortalama += siparisOrtalamasi;
-        }
-
-
+                    .mapToDouble(a -> a.getSatilanfiyat() * a.getMiktar()).sum();
+            miktar=miktar+siparis.getSatilanurunList()
+                    .stream().mapToInt(a -> a.getMiktar()).sum();
+        }System.out.println(siparisOrtalamasi);
+        System.out.println(miktar);
+        ortalama += siparisOrtalamasi/miktar;
         return ortalama;
     }
-
     public Map<String, Double> malsipraisortalama(List<SepetxItem> sepet){
         List<Siparis> siparisList=new ArrayList<>();
         for (int i = 0; i < sepet.size(); i++) {
@@ -132,16 +120,14 @@ public class SiparisService extends ServiceManager<Siparis,Long> implements Seri
         for (int i = 0; i < satilanuruns.size(); i++) {
             String malnumarasi=satilanuruns.get(i).getMal().getMalnumarasi();
             Double ortalama=satilanuruns.stream().
-                    filter(a->a.getMal().getMalnumarasi().equals(malnumarasi)).mapToDouble(a -> a.getSatilanfiyat() * a.getMiktar())
-                    .average()
-                    .orElse(0.0);
-            ortalama_malbazlifiyatlar.put(malnumarasi,ortalama);
-
-
+                    filter(a->a.getMal().getMalnumarasi().equals(malnumarasi)).
+                    mapToDouble(a -> a.getSatilanfiyat() * a.getMiktar())
+                    .sum();
+            Integer miktar=satilanuruns.stream().
+                    filter(a->a.getMal().getMalnumarasi().equals(malnumarasi)).mapToInt(a -> a.getMiktar())
+                    .sum();
+            ortalama_malbazlifiyatlar.put(malnumarasi,ortalama/miktar);
         }
-
-
-
 
         return ortalama_malbazlifiyatlar;
     }
@@ -170,17 +156,11 @@ public class SiparisService extends ServiceManager<Siparis,Long> implements Seri
                         .sum();
                 Tektekmalbazlıbilgiler tektekmalbazlıbilgiler=Tektekmalbazlıbilgiler.builder().
                         malnumarasi(malnumarasi).siparisnumarasi(siparisnumarasi).miktar(miktar).build();
-               if( siparisList.get(j).getSatilanurunList().stream().anyMatch(a -> a.getMal().getMalnumarasi().equals(malnumarasi)))
-                if (!tektekmalbazlıbilgilerlist.stream().anyMatch(a -> a.getMalnumarasi().equals(malnumarasi)&&a.getSiparisnumarasi().equals(siparisnumarasi))) {
+               if( siparisList.get(j).getSatilanurunList().stream().anyMatch(a -> a.getMal().
+                       getMalnumarasi().equals(malnumarasi)))
+                if (!tektekmalbazlıbilgilerlist.stream().anyMatch(a -> a.getMalnumarasi().
+                        equals(malnumarasi)&&a.getSiparisnumarasi().equals(siparisnumarasi))) {
                     tektekmalbazlıbilgilerlist.add(tektekmalbazlıbilgiler);
-                }
-
-        }
-
-
-
-    }
-        return tektekmalbazlıbilgilerlist;
-
-}
+                } } }
+        return tektekmalbazlıbilgilerlist;}
 }

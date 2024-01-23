@@ -18,6 +18,6 @@ import java.util.Map;
 @AllArgsConstructor //dolu constructor oluşturur.
 public class Siparissaverequest {
 
-    List<Satilanurun> satilanurunList;
+    private List<Satilanurun> satilanurunList;
 
 }

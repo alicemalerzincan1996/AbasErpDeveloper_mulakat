@@ -17,9 +17,9 @@ import javax.validation.constraints.NotBlank;
 public class Mal extends BaseEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+   private Long id;
     @NotBlank
     @Column(unique = true)
-    String malnumarasi;
-    Double birim_fiyati_tl;
+    private String malnumarasi;
+    private Double birim_fiyati_tl;
 }

@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 import static com.cemal.constants.EndPoints.*;
-@CrossOrigin(origins = "http://localhost:3001") // React uygulamanızın çalıştığı adres
+@CrossOrigin(origins = "*") // React uygulamanızın çalıştığı adres
 
 @RestController
 @RequestMapping(MAL)

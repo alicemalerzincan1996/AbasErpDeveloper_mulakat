@@ -19,14 +19,14 @@ import javax.persistence.*;
 public class Satilanurun extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    private Long id;
 
 
     @ManyToOne
     @JoinColumn(name = "mal_id")
-    Mal mal;
+    private Mal mal;
 
-    Integer miktar;
+   private Integer miktar;
 
-    Double satilanfiyat;
+    private Double satilanfiyat;
 }

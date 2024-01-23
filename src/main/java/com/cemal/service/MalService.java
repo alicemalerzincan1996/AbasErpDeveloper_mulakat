@@ -20,7 +20,6 @@ import java.util.Optional;
 public class MalService extends ServiceManager<Mal,Long> implements Serializable {
     private final IMalRepository iMalRepository;
     private final IMalveSiparisMapper malveSiparisMapper;
-
     public MalService(IMalRepository iMalRepository, IMalveSiparisMapper malveSiparisMapper) {
         super(iMalRepository);
         this.iMalRepository = iMalRepository;
@@ -49,13 +48,10 @@ public class MalService extends ServiceManager<Mal,Long> implements Serializable
         List<MalResponse>malResponses=new ArrayList<>();
         for (int i = 0; i < malList.size(); i++) {
             malResponses.add(IMalveSiparisMapper.INSTANCE.tomalresponse(malList.get(i)));
-
-
         }
 
         return malResponses;
     };
-
 
     public Mal delete(Long id){
 

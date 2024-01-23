@@ -1,4 +1,4 @@
-package com.company.utility;
+package com.cemal.utility;
 
 import java.util.List;
 import java.util.Optional;

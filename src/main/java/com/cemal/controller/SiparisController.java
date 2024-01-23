@@ -13,8 +13,7 @@ import java.util.List;
 import java.util.Map;
 
 import static com.cemal.constants.EndPoints.*;
-@CrossOrigin(origins = "http://localhost:3001") // React uygulamanızın çalıştığı adres
-
+@CrossOrigin(origins = "*")// React uygulamanızın çalıştığı adres
 @RestController
 @RequestMapping(Siparis)
 public class SiparisController {

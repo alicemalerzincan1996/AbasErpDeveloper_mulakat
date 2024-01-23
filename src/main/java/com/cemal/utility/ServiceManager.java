@@ -1,7 +1,7 @@
-package com.company.utility;
+package com.cemal.utility;
 
 
-import com.company.repository.entity.BaseEntity;
+import com.cemal.repository.entity.BaseEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

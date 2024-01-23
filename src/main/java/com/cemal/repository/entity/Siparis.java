@@ -16,8 +16,8 @@ import java.util.List;
 @Table(name = "tblsiparis")
 public class Siparis extends BaseEntity{
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     @ManyToMany
-    List<Satilanurun> satilanurunList;
+   private List<Satilanurun> satilanurunList;
 }

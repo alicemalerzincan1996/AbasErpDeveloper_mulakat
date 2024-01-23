@@ -1,4 +1,4 @@
-package com.company.exception;
+package com.cemal.exception;
 
 
 import lombok.AllArgsConstructor;
