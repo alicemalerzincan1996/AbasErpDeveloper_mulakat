@@ -1,0 +1,23 @@
+server:
+  port: 9094
+
+spring:
+  security:
+    user:
+      name: admin
+      password: x13
+  cloud:
+    config:
+      enabled: false
+
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: Rx199630
+    url: jdbc:postgresql://localhost:5433/AbasErpDeveloper
+  jpa:
+    hibernate:
+      ddl-auto: create
+
+
