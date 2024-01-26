@@ -4,33 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b8cfe36-ff07-4191-ab4e-145412d4a3fd" name="Changes" comment="">
+    <list default="true" id="0b8cfe36-ff07-4191-ab4e-145412d4a3fd" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cemal/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cemal/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cemal/controller/MalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cemal/controller/MalController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cemal/controller/SiparisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cemal/controller/SiparisController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cemal/dto/request/Malsaverequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cemal/dto/request/Malsaverequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cemal/dto/request/Malupdaterequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cemal/dto/request/Malupdaterequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cemal/dto/request/Satilanurunrequestdto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cemal/dto/request/Satilanurunrequestdto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cemal/dto/request/Siparissaverequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cemal/dto/request/Siparissaverequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cemal/dto/response/MalResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cemal/dto/response/MalResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cemal/exception/CompanyException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cemal/exception/CompanyException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cemal/exception/EerrorType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cemal/exception/EerrorType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cemal/exception/ErrorMesaj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cemal/exception/ErrorMesaj.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cemal/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cemal/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cemal/exception/SiparisandMalException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cemal/exception/SiparisandMalException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cemal/repository/entity/Mal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cemal/repository/entity/Mal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cemal/repository/entity/Satilanurun.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cemal/repository/entity/Satilanurun.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cemal/repository/entity/Siparis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cemal/repository/entity/Siparis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cemal/service/MalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cemal/service/MalService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cemal/service/SiparisService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cemal/service/SiparisService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cemal/utility/IService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cemal/utility/IService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cemal/utility/ServiceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cemal/utility/ServiceManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cemal/repository/IMalRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cemal/repository/IMalRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cemal/repository/ISatilanurunRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cemal/repository/ISatilanurunRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cemal/repository/ISiparisRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cemal/repository/ISiparisRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +48,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/alice/OneDrive/Masaüstü/INtejil IDEA/AbasErpDeveloper_mulakat/src/main/resources&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/alice/OneDrive/Masaüstü&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -112,6 +91,18 @@
       <option name="presentableId" value="Default" />
       <updated>1705921193441</updated>
     </task>
+    <task id="LOCAL-00001" summary="update">
+      <created>1706017105397</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706017105397</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>
